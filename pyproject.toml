@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["kan kawabata <kkawabat@asu.edu>"]
 readme = "README.md"
-packages = [{include = "morse_code_util"}]
+packages = [{include = "morse_code_util", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
