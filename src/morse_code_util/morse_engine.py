@@ -8,9 +8,9 @@ MORSE_TO_CHAR_MAP = {v: k for k, v in CHAR_TO_MORSE_MAP.items()}
 
 
 class MorseEngine:
-    short_duration_threshold = 5  # signal held for <500ms is considered a "dot"
-    short_pause_duration_threshold = 5  # signal pause for <500ms is considered a new code
-    long_pause_duration_threshold = 15  # signal pause for <1500ms is considered a short pause else it's a long pause
+    short_duration_threshold = 8  # signal held for <80ms is considered a "dot"
+    short_pause_duration_threshold = 8  # signal pause for <80ms is considered a new code
+    long_pause_duration_threshold = 24  # signal pause for <240ms is considered a short pause else it's a long pause
 
     @classmethod
     def signal_to_text(cls, signal):
