@@ -37,7 +37,7 @@ class MorseEngine:
 
     @classmethod
     def morse_to_text(cls, morse):
-        morse_breakdown = [MORSE_TO_CHAR_MAP.get(morse_block, '?') for morse_block in morse.split(' ') if morse_block != '']
+        morse_breakdown = [MORSE_TO_CHAR_MAP.get(morse_block, '�') for morse_block in morse.split(' ') if morse_block != '']
         text = ''.join(morse_breakdown).strip()
         return text
 
