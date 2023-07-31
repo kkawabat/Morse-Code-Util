@@ -6,7 +6,7 @@ CHAR_TO_MORSE_MAP = {'a': '.-', 'b': '-...', 'c': '-.-.', 'd': '-..', 'e': '.', 
                      '6': '-....', '7': '--...', '8': '---..', '9': '----.', ' ': '/'}
 MORSE_TO_CHAR_MAP = {v: k for k, v in CHAR_TO_MORSE_MAP.items()}
 
-SIGNAL_FRAME_PERIOD = 10  # 10 ms
+SIGNAL_FRAME_PERIOD = 100
 
 
 class MorseEngine:
