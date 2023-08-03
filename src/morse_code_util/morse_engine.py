@@ -10,11 +10,11 @@ SIGNAL_FRAME_PERIOD = 100
 
 
 class MorseEngine:
-    def __init__(self, tapping_speed=.08):
+    def __init__(self, tapping_speed=.08, short_pause_multiple=2, long_pause_multiple=6):
         self.tapping_speed = tapping_speed
         self.short_duration_threshold = tapping_speed * SIGNAL_FRAME_PERIOD
-        self.short_pause_duration_threshold = tapping_speed * SIGNAL_FRAME_PERIOD * 3
-        self.long_pause_duration_threshold = tapping_speed * SIGNAL_FRAME_PERIOD * 7
+        self.short_pause_duration_threshold = tapping_speed * SIGNAL_FRAME_PERIOD * short_pause_multiple
+        self.long_pause_duration_threshold = tapping_speed * SIGNAL_FRAME_PERIOD * long_pause_multiple
 
     def signal_to_text(self, signal):
         morse = self.signal_to_morse(signal)
